@@ -1,0 +1,17 @@
+name: test-actions
+
+run-name: ${{ github.actor }} is testing out GitHub Actions
+
+on:
+  push:
+    branches:
+      - main
+      - develop
+
+jobs:
+  actions-test:
+    runs-on: macos-latest
+    steps:
+      - name: Actions test
+      - uses: actions/checkout@v3
+      - run: ./install.sh
