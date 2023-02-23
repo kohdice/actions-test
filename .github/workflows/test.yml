@@ -12,6 +12,6 @@ jobs:
   actions-test:
     runs-on: macos-latest
     steps:
+      - uses: actions/checkout@v3
       - name: Actions test
-        uses: actions/checkout@v3
         run: ./install.sh
